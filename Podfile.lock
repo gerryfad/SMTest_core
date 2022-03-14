@@ -1,0 +1,119 @@
+PODS:
+  - ActionSheetPicker-3.0 (2.3.0)
+  - Alamofire (4.9.1)
+  - AlamofireImage (3.4.1):
+    - Alamofire (~> 4.7)
+  - DZNEmptyDataSet (1.8.1)
+  - ISO8601 (0.6.0)
+  - KeychainSwift (19.0.0)
+  - Popover (1.3.0)
+  - Realm (5.5.1):
+    - Realm/Headers (= 5.5.1)
+  - Realm/Headers (5.5.1)
+  - RealmSwift (5.5.1):
+    - Realm (= 5.5.1)
+  - RxAlamofire (5.1.0):
+    - RxAlamofire/Core (= 5.1.0)
+  - RxAlamofire/Core (5.1.0):
+    - Alamofire (~> 4.8)
+    - RxSwift (~> 5.0)
+  - RxCocoa (5.0.0):
+    - RxRelay (~> 5)
+    - RxSwift (~> 5)
+  - RxRelay (5.0.0):
+    - RxSwift (~> 5)
+  - RxSwift (5.0.0)
+  - SDWebImage (5.12.4):
+    - SDWebImage/Core (= 5.12.4)
+  - SDWebImage/Core (5.12.4)
+  - SVProgressHUD (2.2.5)
+  - SVPullToRefresh (0.4.1)
+  - SwiftDate (6.1.0)
+  - SwiftGen (6.4.0)
+  - SwiftLint (0.40.0)
+  - SwiftyJSON (5.0.0)
+  - TPKeyboardAvoiding (1.3.2)
+
+DEPENDENCIES:
+  - ActionSheetPicker-3.0 (~> 2.0)
+  - Alamofire (~> 4.0)
+  - AlamofireImage (~> 3.0)
+  - DZNEmptyDataSet (from `https://github.com/supermnemonic/DZNEmptyDataSet.git`)
+  - ISO8601
+  - KeychainSwift
+  - Popover
+  - RealmSwift (~> 5.0)
+  - RxAlamofire (~> 5.0)
+  - RxCocoa
+  - RxSwift
+  - SDWebImage (~> 5.0)
+  - SVProgressHUD (= 2.2.5)
+  - SVPullToRefresh (from `https://github.com/supermnemonic/SVPullToRefresh.git`)
+  - SwiftDate (= 6.1.0)
+  - SwiftGen (= 6.4.0)
+  - SwiftLint (= 0.40.0)
+  - SwiftyJSON
+  - TPKeyboardAvoiding (~> 1.0)
+
+SPEC REPOS:
+  trunk:
+    - ActionSheetPicker-3.0
+    - Alamofire
+    - AlamofireImage
+    - ISO8601
+    - KeychainSwift
+    - Popover
+    - Realm
+    - RealmSwift
+    - RxAlamofire
+    - RxCocoa
+    - RxRelay
+    - RxSwift
+    - SDWebImage
+    - SVProgressHUD
+    - SwiftDate
+    - SwiftGen
+    - SwiftLint
+    - SwiftyJSON
+    - TPKeyboardAvoiding
+
+EXTERNAL SOURCES:
+  DZNEmptyDataSet:
+    :git: https://github.com/supermnemonic/DZNEmptyDataSet.git
+  SVPullToRefresh:
+    :git: https://github.com/supermnemonic/SVPullToRefresh.git
+
+CHECKOUT OPTIONS:
+  DZNEmptyDataSet:
+    :commit: 2c5f6463c0b5738a6a4afebee0cd3ba66d06a541
+    :git: https://github.com/supermnemonic/DZNEmptyDataSet.git
+  SVPullToRefresh:
+    :commit: 047977aca64bae6f7a71981de8879ff5a13bc12c
+    :git: https://github.com/supermnemonic/SVPullToRefresh.git
+
+SPEC CHECKSUMS:
+  ActionSheetPicker-3.0: eef157d75e151f255c5333d26656c7fbfe905a51
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  AlamofireImage: 78d67ccbb763d87ba44b21583d2153500a195630
+  DZNEmptyDataSet: b94434220f87d9dda46660eb4f07a424778e93b4
+  ISO8601: d3ea3ba9b752820cf92c6b47a9ee327e9f0e13fc
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  Popover: 10e1d9528f81d9504df984b7b3f491292bc1822d
+  Realm: c2ffe0667f9c98c9ba65f608ba85684d39826145
+  RealmSwift: 5a35c1c35c3e1925e6fcd092c881d5cc4a826bff
+  RxAlamofire: a2d7621de4c23a0c6e7b476b504acc32838ee341
+  RxCocoa: fcf32050ac00d801f34a7f71d5e8e7f23026dcd8
+  RxRelay: 4f7409406a51a55cd88483f21ed898c234d60f18
+  RxSwift: 8b0671caa829a763bbce7271095859121cbd895f
+  SDWebImage: 631cf572cc93dfdfe54162e556410a61f1141928
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
+  SVPullToRefresh: ba2e718695a43253d8bea6852d2960097dc15d8c
+  SwiftDate: fa2bb3962056bb44047b4b85a30044e5eae30b03
+  SwiftGen: 67860cc7c3cfc2ed25b9b74cfd55495fc89f9108
+  SwiftLint: 4154893c73a4c52d6240195507eb7a3e3c64087e
+  SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
+  TPKeyboardAvoiding: cb69d5ddbe90ce0170e4bc2db1e5e41d4a3ad9a4
+
+PODFILE CHECKSUM: 02bc1b1427bbfa27f853555d6e4288b2279e621b
+
+COCOAPODS: 1.11.2

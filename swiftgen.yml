@@ -1,0 +1,15 @@
+strings:
+  inputs: SMV-iper/Localization/LocalizationCore/en.lproj
+  filter: .+\.strings$
+  outputs:
+    - templatePath: sm-structured-swift4.stencil
+      output: SMV-iper/Constant/localize-strings.swift
+      params: 
+        enumName: Lstr
+xcassets:
+  inputs:
+    - SMV-iper/Assets.xcassets
+    - SMV-iper/Colors.xcassets
+  outputs:
+    - templateName: swift4
+      output: SMV-iper/Constant/assets.swift

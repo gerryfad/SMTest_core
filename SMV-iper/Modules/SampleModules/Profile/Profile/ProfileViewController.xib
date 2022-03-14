@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileViewController" customModule="SMV_iper" customModuleProvider="target">
+            <connections>
+                <outlet property="labelGreet" destination="oMy-rn-eOF" id="wzO-md-lPv"/>
+                <outlet property="stackViewNameContainer" destination="GK8-fg-WeA" id="Wnr-EX-twT"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContainer" destination="SgU-Gv-ukz" id="kQf-Bn-Ztq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lfa-ya-1s5">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n9d-ux-Qsi">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="165.5"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="YBu-wc-OGZ">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="165.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_photo_profile" translatesAutoresizingMaskIntoConstraints="NO" id="5yt-8p-mO0">
+                                            <rect key="frame" x="16" y="33" width="100" height="100"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="100" id="Sjv-3m-qzT"/>
+                                                <constraint firstAttribute="width" constant="100" id="huv-Cy-fHs"/>
+                                            </constraints>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="50"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </imageView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GK8-fg-WeA">
+                                            <rect key="frame" x="132" y="48.5" width="266" height="69"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMy-rn-eOF">
+                                                    <rect key="frame" x="8" y="8" width="250" height="20.5"/>
+                                                    <attributedString key="attributedText">
+                                                        <fragment content="Halo John">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.27932512760162354" green="0.62768387794494629" blue="0.91344624757766724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                <font key="NSFont" metaFont="system" size="17"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trafalgar D Water law" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q3A-1F-MKh" customClass="SMHeadingLabel" customModule="SMV_iper" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="28.5" width="250" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="torao@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tg2-1h-VA7" customClass="SMSubLabel" customModule="SMV_iper" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="46.5" width="250" height="14.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                        </stackView>
+                                    </subviews>
+                                    <edgeInsets key="layoutMargins" top="16" left="16" bottom="16" right="16"/>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="n9d-ux-Qsi" secondAttribute="height" multiplier="5:2" id="3nY-rh-vVL"/>
+                                <constraint firstAttribute="bottom" secondItem="YBu-wc-OGZ" secondAttribute="bottom" id="I06-l9-J5Q"/>
+                                <constraint firstAttribute="trailing" secondItem="YBu-wc-OGZ" secondAttribute="trailing" id="Jjd-l5-26T"/>
+                                <constraint firstItem="YBu-wc-OGZ" firstAttribute="leading" secondItem="n9d-ux-Qsi" secondAttribute="leading" id="Yif-4G-QNr"/>
+                                <constraint firstItem="YBu-wc-OGZ" firstAttribute="top" secondItem="n9d-ux-Qsi" secondAttribute="top" id="cWF-sz-fUf"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SgU-Gv-ukz">
+                            <rect key="frame" x="0.0" y="165.5" width="414" height="652.5"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                    </subviews>
+                    <edgeInsets key="layoutMargins" top="0.0" left="0.0" bottom="0.0" right="0.0"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="lfa-ya-1s5" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="NYL-Xk-wxx"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="lfa-ya-1s5" secondAttribute="bottom" id="bfy-QZ-73f"/>
+                <constraint firstItem="lfa-ya-1s5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="lAb-fF-1zn"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="lfa-ya-1s5" secondAttribute="trailing" id="xSY-fg-riP"/>
+            </constraints>
+            <point key="canvasLocation" x="133" y="96"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Q3A-1F-MKh">
+            <size key="intrinsicContentSize" width="150.5" height="18"/>
+        </designable>
+        <designable name="Tg2-1h-VA7">
+            <size key="intrinsicContentSize" width="98.5" height="14.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="ic_photo_profile" width="112.5" height="112.5"/>
+    </resources>
+</document>

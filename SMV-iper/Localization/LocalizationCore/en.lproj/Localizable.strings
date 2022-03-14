@@ -1,0 +1,21 @@
+/* 
+  Localizable.strings
+  SMV-iper
+
+  Created by Rifat Firdaus on 04/07/19.
+  Copyright © 2019 Rifat Firdaus. All rights reserved.
+*/
+
+//"<key>" = "<localized value>";
+
+"language" = "Language";
+"selectLanguage" = "Select Language";
+"selectLanguageForThisApp" = "Select Language for This App";
+"cancel" = "Cancel";
+
+"repository" = "Repository";
+"news" = "News";
+"login" = "Login";
+"hiX" = "Hi, %@!";
+"somethingWentWrong" = "Oops, something is wrong with the system.";
+"test" = "Test";

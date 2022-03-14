@@ -1,0 +1,188 @@
+included:
+  - SMV-iper/Modules
+  
+#excluded:
+#  - Pods
+#  - SMV-iper/Engine
+#  - SMV-iper/Models
+#  - SMV-iperTests
+
+opt_in_rules:
+  - custom_rules
+
+disabled_rules:
+  - force_cast
+  - line_length
+  - trailing_whitespace
+  - unused_optional_binding
+
+line_length:
+    warning: 150
+    error: 200
+    ignores_function_declarations: true
+    ignores_comments: true
+    ignores_urls: true
+function_parameter_count:
+    warning: 6
+    error: 8
+reporter: "xcode"
+
+custom_rules:
+    # suitmobile
+    
+    # class and protocol
+    sm_presenter_name:
+        name: "Presenter Name"
+        regex: '(class)\s+(\w+(?<!Presenter))\s*(\:)\s*(Base|\w+)Presenter(\<.+\>)?\s*\{'
+        message: "Subclass harus berakhiran 'Presenter'"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_controller_name:
+        name: "Controller Name"
+        regex: '(class)\s+(\w+(?<!Controller)|[^A-Z]\w*Controller)\s*(\:)\s*(UI|\w+)Controller\s*\{'
+        message: "Subclass harus berakhiran 'Controller'"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_label_name:
+        name: "UILabel Name"
+        regex: '(class)\s+(\w+(?<!Label)|[^A-Z]\w*Label)\s*(\:)\s*(UI|\w+)Label\s*\{'
+        message: "Subclass harus berakhiran 'Label'"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_textfield_name:
+        name: "UITextField Name"
+        regex: '(class)\s+(\w+(?<!TextField)|[^A-Z]\w*TextField)\s*(\:)\s*(UI|\w+)TextField\s*\{'
+        message: "Subclass harus berakhiran 'TextField'"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_textview_name:
+        name: "UITextView Name"
+        regex: '(class)\s+(\w+(?<!TextView)|[^A-Z]\w*TextView)\s*(\:)\s*(UI|\w+)TextView\s*\{'
+        message: "Subclass harus berakhiran 'TextView'"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    
+    # identifier
+    sm_weak_presenterprotocol_identifier:
+        name: "Weak Presenter Protocol Identifier"
+        regex: '(?<!weak.{0,20})[^\S\r\n]*(var)\s+(view\w*)\s*(\=|\:)\s*(\w*PresenterProtocol)(\?|\!)'
+        message: "PresenterProtocol harus 'weak'"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_presenterprotocol_identifier:
+        name: "Presenter Protocol Identifier"
+        regex: '(var|let)\s+((?!view)\w*|view[a-z0-9\_]\w*)\s*(\=|\:)\s*(\w*PresenterProtocol)\s*(\?|\!|\(|\=|\.)'
+        message: "Identifier harus/berawalan 'view' dan camelCase"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_presenter_identifier:
+        name: "Presenter Identifier"
+        regex: '(var|let)\s+((?!presenter)\w+|presenter[a-z0-9\_]\w*)\s*(\=|\:)\s*[A-Z]\w*Presenter\s*(\?|\!|\(|\=|\.)'
+        message: "Identifier harus 'presenter' atau berawalan 'presenter' dan camelCase"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_button_identifier:
+        name: "Button Identifier"
+        regex: '(var|let)\s+(button|(?!button)\w+|button[^A-Z]\w*)\s*(\=|\:)\s*(UI|\w+)Button\s*(\?|\!|\(|\=|\.)'
+        message: "Identifier harus berawalan 'button' dan camelCase"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_label_identifier:
+        name: "Label Identifier"
+        regex: '(var|let)\s+(label|(?!label)\w+|label[^A-Z]\w*)\s*(\=|\:)\s*(UI|\w+)Label\s*(\?|\!|\(|\=|\.)'
+        message: "Identifier harus berawalan 'label' dan camelCase"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_textfield_identifier:
+        name: "TextField Identifier"
+        regex: '(var|let)\s+(textField|(?!textField)\w+|textField[^A-Z]\w*)\s*(\=|\:)\s*(UI|\w+)TextField\s*(\?|\!|\(|\=|\.)'
+        message: "Identifier harus berawalan 'textField' dan camelCase"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_textview_identifier:
+        name: "TextView Identifier"
+        regex: '(var|let)\s+(textView|(?!textView)\w+|textView[^A-Z]\w*)\s*(\=|\:)\s*(UI|\w+)TextView\s*(\?|\!|\(|\=|\.)'
+        message: "Identifier harus berawalan 'textView' dan camelCase"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_imageview_identifier:
+        name: "ImageView Identifier"
+        regex: '(var|let)\s+(imageView|(?!imageView)\w+|imageView[^A-Z]\w*)\s*(\=|\:)\s*(UI|\w+)ImageView\s*(\?|\!|\(|\=|\.)'
+        message: "Identifier harus berawalan 'imageView' dan camelCase"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+    sm_layoutconstraint_identifier:
+        name: "LayoutConstraint Identifier"
+        regex: '(var|let)\s+(constraint|(?!constraint)\w+|constraint[^A-Z]+\w*)\s*(\=|\:)\s*NSLayoutConstraint\s*(\?|\!|\(|\=|\.)'
+        message: "Identifier harus berawalan 'constraint' dan camelCase"
+        severity: error
+        match_kinds: 
+          - typeidentifier
+          - identifier
+          - keyword
+          
+    # dari internet (https://github.com/realm/SwiftLint/issues/602)
+    comments_space:
+        name: "Space After Comment"
+        regex: '(^ *\/\/\w+)'
+        message: "There should be a space after //"
+        severity: warning
+    empty_first_line:
+        name: "Empty First Line"
+        regex: '(^[ a-zA-Z ]*(?:class) (?!(?:var|let))[ a-zA-Z:]*\{\n *\S+)'
+        message: "There should be an empty line after a declaration"
+        severity: warning
+    empty_line_after_guard:
+        name: "Empty Line After Guard"
+        regex: '(^ *guard[ a-zA-Z0-9=?.\(\),><!]*\{[ a-zA-Z0-9=?.\(\),><!]*\}\n *(?!(?:return|guard))\S+)'
+        message: "There should be an empty line after a guard"
+        severity: warning
+    empty_line_after_super:
+        name: "Empty Line After Super"
+        regex: '(^ *super\.[ a-zA-Z0-9=?.\(\)\{\}:,><!]*\n *(?!(?:\}|return))\S+)'
+        message: "There should be an empty line after super"
+        severity: warning
+    multiple_empty_lines:
+        name: "Multiple Empty Lines"
+        regex: '((?:\s*\n){3,})'
+        message: "There are too many line breaks"
+        severity: warning
