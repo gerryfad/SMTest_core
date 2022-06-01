@@ -71,12 +71,7 @@ class FirstViewController: UIViewController {
     }()
     
     @objc func handleNext() {
-//        let vc = SecondViewController(name: nameField.text ?? "")
-//
-//        navVC.modalPresentationStyle = .fullScreen
-//        present(navVC, animated: true)
-        
-        let vc = UINavigationController(rootViewController: SecondViewController())
+      
         presentToSecondView(name: textFieldName.text ?? "")
     }
     

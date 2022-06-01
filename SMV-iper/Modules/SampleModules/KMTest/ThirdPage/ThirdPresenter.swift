@@ -11,7 +11,6 @@ import RxSwift
 import RxCocoa
 
 protocol ThirdPresenterProtocol: BaseProtocol {
-    func selectUser(select: String)
 }
 
 class ThirdPresenter: PaginationPresenter<User> {
@@ -41,9 +40,6 @@ class ThirdPresenter: PaginationPresenter<User> {
 
     }
     
-    func selectUser(select: String){
-        self.view?.selectUser(select: select)
-    }
     
     
     

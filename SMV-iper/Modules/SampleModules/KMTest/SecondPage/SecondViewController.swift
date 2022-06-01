@@ -10,6 +10,15 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
+    init(name: String) {
+        self.name = name
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     var presenter: SecondPresenter!
 
     var name: String = ""
@@ -111,13 +120,7 @@ class SecondViewController: UIViewController {
     }
 }
 
-extension SecondViewController: SecondPresenterProtocol , ThirdPresenterProtocol{
-    func selectUser(select: String) {
-        labelSelectedName.text = select
-    }
-    
-    
-
+extension SecondViewController: ThirdViewControllerDelegate, SecondPresenterProtocol {
     func showData() {
         
     }
@@ -126,29 +129,30 @@ extension SecondViewController: SecondPresenterProtocol , ThirdPresenterProtocol
         
     }
     
-    
+    func setUser(user: User) {
+        labelSelectedName.text = "\(user.firstName ?? "") \(user.lastName ?? "")"
+    }
 }
 
 // MARK: - Router
 
 extension SecondViewController {
     static func instantiate(name: String) -> SecondViewController {
-        let view = SecondViewController()
-        view.name = name
+        let view = SecondViewController(name: name)
         let presenter = SecondPresenter()
         view.presenter = presenter
         presenter.view = view
-        ThirdPresenter.view = view
         return view
     }
     
-    static func instantiateNav(name: String) -> UINavigationController {
+    static func instantiateNav(name : String) -> UINavigationController {
         let view = instantiate(name: name)
         return UINavigationController(rootViewController: view)
     }
     
     func presentToThirdView() {
         let view = ThirdViewController.instantiate()
+        view.delegate = self
         navigationController?.pushViewController(view, animated: true)
     }
 }

@@ -11,12 +11,18 @@ import TPKeyboardAvoiding
 import DZNEmptyDataSet
 import SVProgressHUD
 
+protocol ThirdViewControllerDelegate {
+    func setUser(user: User)
+}
+
 
 class ThirdViewController: UIViewController{
     
     lazy var viewShimmer = SimpleListShimmerView()
     var tableView: TPKeyboardAvoidingTableView!
     var presenter: ThirdPresenter!
+    
+    var delegate: ThirdViewControllerDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -82,13 +88,8 @@ extension ThirdViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         let user = presenter.items[indexPath.row]
-        let selectedUser = "\(user.firstName!) \(user.lastName!)"
+        delegate?.setUser(user: user)
         navigationController?.popViewController(animated: true)
-        presenter.view?.selectUser(select: selectedUser)
-        print(selectedUser)
-        
-       
-       
         
     }
 }
